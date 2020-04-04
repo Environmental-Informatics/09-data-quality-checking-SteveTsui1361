@@ -138,47 +138,47 @@ if __name__ == '__main__':
     print("\nAll processing finished.....\n", DataDF.describe())
     print("\nFinal changed values counts.....\n", ReplacedValuesDF)
     
-# Plot original and modified data
-# Precipitation data
-plt.figure(figsize=(9, 5))
-plt.plot(DataDF.index, DataDF_origin['Precip'], label='Precip (original)')
-plt.plot(DataDF.index, DataDF['Precip'], label='Precip (modified)')
-plt.title('Preciptation before and after data quality checking')
-plt.xlabel('Time')
-plt.ylabel('Precipitation')
-plt.legend()
-plt.show()
-
-# Max Temperature data
-plt.figure(figsize=(9, 5))
-plt.plot(DataDF.index, DataDF_origin['Max Temp'], label='Max Temp (original)')
-plt.plot(DataDF.index, DataDF['Max Temp'], label='Max Temp (modified)')
-plt.title('Max temperature before and after data quality checking')
-plt.xlabel('Time')
-plt.ylabel('Max temperature')
-plt.legend()
-plt.show()
-
-# Min Temperature data
-plt.figure(figsize=(9, 5))
-plt.plot(DataDF.index, DataDF_origin['Min Temp'], label='Min Temp (original)')
-plt.plot(DataDF.index, DataDF['Min Temp'], label='Min Temp (modified)')
-plt.title('Min temperature before and after data quality checking')
-plt.xlabel('Time')
-plt.ylabel('Min temperature')
-plt.legend()
-plt.show()
-
-# Temperature data
-plt.figure(figsize=(9, 5))
-plt.plot(DataDF.index, DataDF_origin['Wind Speed'], label='Wind Speed (original)')
-plt.plot(DataDF.index, DataDF['Wind Speed'], label='Wind Speed (modified)')
-plt.title('Wind Speed before and after data quality checking')
-plt.xlabel('Time')
-plt.ylabel('Wind Speed')
-plt.legend()
-plt.show()
-
-# Save modified data into another file
-DataDF.to_csv('Modified data.txt', header = None, sep=' ') 
-ReplacedValuesDF.to_csv('Error Check.txt', sep='\t')
+    # Plot original and modified data
+    # Precipitation data
+    plt.figure(figsize=(9, 5))
+    plt.plot(DataDF.index, DataDF_origin['Precip'], label='Precip (original)')
+    plt.plot(DataDF.index, DataDF['Precip'], label='Precip (modified)')
+    plt.title('Preciptation before and after data quality checking')
+    plt.xlabel('Time')
+    plt.ylabel('Precipitation')
+    plt.legend()
+    plt.show()
+    
+    # Max Temperature data
+    plt.figure(figsize=(9, 5))
+    plt.plot(DataDF.index, DataDF_origin['Max Temp'], label='Max Temp (original)')
+    plt.plot(DataDF.index, DataDF['Max Temp'], label='Max Temp (modified)')
+    plt.title('Max temperature before and after data quality checking')
+    plt.xlabel('Time')
+    plt.ylabel('Max temperature')
+    plt.legend()
+    plt.show()
+    
+    # Min Temperature data
+    plt.figure(figsize=(9, 5))
+    plt.plot(DataDF.index, DataDF_origin['Min Temp'], label='Min Temp (original)')
+    plt.plot(DataDF.index, DataDF['Min Temp'], label='Min Temp (modified)')
+    plt.title('Min temperature before and after data quality checking')
+    plt.xlabel('Time')
+    plt.ylabel('Min temperature')
+    plt.legend()
+    plt.show()
+    
+    # Temperature data
+    plt.figure(figsize=(9, 5))
+    plt.plot(DataDF.index, DataDF_origin['Wind Speed'], label='Wind Speed (original)')
+    plt.plot(DataDF.index, DataDF['Wind Speed'], label='Wind Speed (modified)')
+    plt.title('Wind Speed before and after data quality checking')
+    plt.xlabel('Time')
+    plt.ylabel('Wind Speed')
+    plt.legend()
+    plt.show()
+    
+    # Save modified data into another file
+    DataDF.to_csv('Modified data.txt', header = None, sep=' ') 
+    ReplacedValuesDF.to_csv('Error Check.txt', sep='\t')
