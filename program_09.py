@@ -1,6 +1,7 @@
 #!/bin/env python
 # add your header here
-#
+# This code is used to check the quality of climate data for asingle site
+# Creator: xu1361
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -169,7 +170,7 @@ if __name__ == '__main__':
     plt.legend()
     plt.show()
     
-    # Temperature data
+    # Wind Speed data
     plt.figure(figsize=(9, 5))
     plt.plot(DataDF.index, DataDF_origin['Wind Speed'], label='Wind Speed (original)')
     plt.plot(DataDF.index, DataDF['Wind Speed'], label='Wind Speed (modified)')
